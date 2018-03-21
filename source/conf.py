@@ -68,7 +68,7 @@ release = 'v1r0p0'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'en'
+language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -146,10 +146,10 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = []
-# (master_doc, 'Chern.tex', 'Chern Documentation',
-# 'Mingrui Zhao', 'manual'),
-# ]
+latex_documents = [
+    (master_doc, 'Chern.tex', 'Chern Documentation',
+     'Mingrui Zhao', 'manual'),
+]
 
 
 # -- Options for manual page output ---------------------------------------
