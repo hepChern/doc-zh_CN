@@ -13,19 +13,46 @@ Chern init可以从已有的Chern项目中新建。
 ### VData
 ### VDirectory
 
-## Basic command
-### cd 
-Change the directory
+## 基本操作
 
-### mv A B
-rename the file A to file B
-if B exists, mv A to the subdir of B
-this operation will keep the top
+### 目录操作
+#### cd DESTINATION/OBJECT
+将当前路径更改为DESTINATION/OBJECT，可以为路径，算法或任务等。
 
-### cp 
-Copy the full directory 
+#### ls
+查看当前OBJECT的信息
 
-### add
+#### mv SOURCE DESTINATION
+将`object`SOURCE移动到`object`DESTINATION。
+如果DESTINATION是一个已有的路径，那么将SOURCE移动到DESTINATION下。
+此操作会保持`impression`。
+
+#### cp SOURCE DESTINATION
+将`object`SOURCE复制到`object`DESTINATION。
+
+#### rm SOURCE
+删除`object`SOURCE
+
+#### mkdir OBJECT
+新建目录
+
+#### mkalgorithm OBJECT
+新建算法
+
+#### mktask OBJECT
+新建任务
+
+### 算法/任务操作
+
+#### status
+查询该算法状态
+
+#### jobs
+查询全部作业
+
+### 算法操作
+#### add source
+
 + add input [input_data] [nickname]
 + add output [output_data] [nickname]
 + add algorithm [algorithm]
@@ -36,3 +63,14 @@ Copy the full directory
 + readme edit
 
 ### 
+
+## 批量模式
+### 目录操作
+#### obj("SOURCE").mv("DESTINATION")
++ 例子：
+```
+for source in ["file1", "file2", "file3", "file4"]:
+  obj(source).move("..{}".format(source))
+```
+
+
