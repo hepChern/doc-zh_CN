@@ -89,7 +89,8 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-
+   
+   UserGuide
    schedule
    installation
    start
